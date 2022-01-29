@@ -1,0 +1,29 @@
+.Box{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50px;
+    display: flex;
+    gap: 2px;
+    width: 400px;
+    *{
+        height: 100%;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    input{
+        border: 0;
+        outline: 0;
+        width: 100%;
+    }
+    button{
+        width: 100px;
+        color: #fff;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+    }
+    .delBtn{background: #d63031;}
+    .addBtn{background: #0984e3;}
+}

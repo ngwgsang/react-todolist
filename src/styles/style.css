@@ -1,0 +1,133 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #0F2027;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#2C5364), color-stop(#203A43), to(#0F2027));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: relative;
+}
+
+.Header {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.Box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  width: 400px;
+}
+
+.Box * {
+  height: 100%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.Box input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.Box button {
+  width: 100px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.Box .delBtn {
+  background: #d63031;
+}
+
+.Box .addBtn {
+  background: #0984e3;
+}
+
+.List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 50px;
+  list-style: none;
+}
+
+.List li {
+  background: #fff;
+  padding: 15px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.List .active {
+  position: relative;
+  background: #00b894;
+  z-index: 1;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.List .active::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #00b894;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.List .active::after {
+  z-index: 10;
+  content: "Hoàn thành";
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 600;
+  padding: 0 4px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+/*# sourceMappingURL=style.css.map */

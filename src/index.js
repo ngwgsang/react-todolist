@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +10,28 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const addBtn = document.querySelector('.addBtn')
+const delBtn = document.querySelector('.delBtn')
+let list = document.querySelectorAll('List li')
+
+const addToDoList = () => {
+  let val = document.querySelector('.Box input').value 
+  document.querySelector('.List').innerHTML += `<li>${val}</li>`
+  list = document.querySelectorAll('.List li')
+  list.forEach((e) =>{
+    e.addEventListener('click', ()=>{
+      e.classList.toggle('active')
+    })
+  })
+}
+
+const delTodoList = () =>{
+  document.querySelectorAll('.active').forEach((e) =>{
+    e.remove();
+  })
+}
+
+addBtn.addEventListener('click', addToDoList)
+delBtn.addEventListener('click', delTodoList)
+
